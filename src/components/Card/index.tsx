@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Text } from 'jetswap-uikit'
+import { Text } from 'bitswap-uikit'
 
 const Card = styled.div<any>`
   width: 100%;

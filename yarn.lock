@@ -9787,9 +9787,9 @@ jest@26.6.0:
     import-local "^3.0.2"
     jest-cli "^26.6.0"
 
-jetswap-uikit@^0.0.16:
+bitswap-uikit@^0.0.16:
   version "0.0.16"
-  resolved "https://registry.yarnpkg.com/jetswap-uikit/-/jetswap-uikit-0.0.16.tgz#1108c9c5de30eb2e512e90d0cb4bb63eee2b04c1"
+  resolved "https://registry.yarnpkg.com/bitswap-uikit/-/bitswap-uikit-0.0.16.tgz#1108c9c5de30eb2e512e90d0cb4bb63eee2b04c1"
   integrity sha512-EoKixndsH6x/4tAxlp/FGfkvQFSClgjTjDhQcZ/pYnx2vQwTPp9N7+5hoOeapwVDEgjLtW/B7OnrL9YpsMK0cg==
   dependencies:
     "@types/lodash" "^4.14.162"
