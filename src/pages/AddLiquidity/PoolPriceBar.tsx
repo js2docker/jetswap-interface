@@ -1,5 +1,5 @@
 import React from 'react'
-import { Currency, Percent, Price } from '@domgeswap/creamswap-sdk'
+import { Currency, Percent, Price } from '@pancakeswap-libs/sdk'
 import { Text } from 'jetswap-uikit'
 import { AutoColumn } from '../../components/Column'
 import { AutoRow } from '../../components/Row'

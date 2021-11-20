@@ -1,4 +1,4 @@
-import { Currency, ETHER, JSBI, TokenAmount } from '@domgeswap/creamswap-sdk'
+import { Currency, ETHER, JSBI, TokenAmount } from '@pancakeswap-libs/sdk'
 import React, { useCallback, useEffect, useState } from 'react'
 import { Button, ChevronDownIcon, AddIcon, CardBody, Text } from 'jetswap-uikit'
 import CardNav from 'components/CardNav'

@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, Fraction, Percent } from '@domgeswap/creamswap-sdk'
+import { Currency, CurrencyAmount, Fraction, Percent } from '@pancakeswap-libs/sdk'
 import React from 'react'
 import { Button } from 'jetswap-uikit'
 import { RowBetween, RowFixed } from '../../components/Row'

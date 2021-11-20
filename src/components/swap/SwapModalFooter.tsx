@@ -1,4 +1,4 @@
-import { Trade, TradeType } from '@domgeswap/creamswap-sdk'
+import { Trade, TradeType } from '@pancakeswap-libs/sdk'
 import React, { useMemo, useState } from 'react'
 import { Text , Button } from 'jetswap-uikit'
 import { Repeat } from 'react-feather'

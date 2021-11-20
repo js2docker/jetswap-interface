@@ -1,4 +1,4 @@
-import { CurrencyAmount, JSBI, Token, Trade } from '@domgeswap/creamswap-sdk'
+import { CurrencyAmount, JSBI, Token, Trade } from '@pancakeswap-libs/sdk'
 import React, { useCallback, useContext, useEffect, useMemo, useState } from 'react'
 import { ArrowDown } from 'react-feather'
 import { CardBody, ArrowDoubleIcon, Button, IconButton, Text } from 'jetswap-uikit'
