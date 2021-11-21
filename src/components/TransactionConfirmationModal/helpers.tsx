@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react'
 import styled from 'styled-components'
-import { Heading, IconButton, CloseIcon } from 'bitswap-uikit'
+import { Heading, IconButton, CloseIcon } from '@domgeswap/uikit100'
 import { AutoColumn, ColumnCenter } from '../Column'
 
 

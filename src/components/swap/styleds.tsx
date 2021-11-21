@@ -1,7 +1,7 @@
 import { transparentize } from 'polished'
 import React from 'react'
 import { AlertTriangle } from 'react-feather'
-import { Text } from 'bitswap-uikit'
+import { Text } from '@domgeswap/uikit100'
 import styled, { css } from 'styled-components'
 import { AutoColumn } from '../Column'
 
@@ -68,12 +68,6 @@ export const StyledBalanceMaxMini = styled.button`
     background-color: ${({ theme }) => theme.colors.tertiary};
     outline: none;
   }
-`
-
-export const TruncatedText = styled(Text)`
-  text-overflow: ellipsis;
-  width: 220px;
-  overflow: hidden;
 `
 
 // styles
