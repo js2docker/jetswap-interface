@@ -1,5 +1,5 @@
 /* eslint-disable no-param-reassign */
-import { Toast } from '@domgeswap/uikit100'
+import { Toast } from '@damiand/jetswap-uikit'
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
 const initialState: ToastsState = {

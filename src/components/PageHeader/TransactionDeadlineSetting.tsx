@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
-import { Input, Text, Flex, Box } from '@domgeswap/uikit100'
+import { Input, Text, Flex, Box } from '@damiand/jetswap-uikit'
 import { useUserDeadline } from 'state/user/hooks'
 import QuestionHelper from '../QuestionHelper'
 

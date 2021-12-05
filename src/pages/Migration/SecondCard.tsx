@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react'
-import { Card, CardHeader, CardBody, Text, Box, Button, Flex, ArrowDownIcon, Link } from '@domgeswap/uikit100'
+import { Card, CardHeader, CardBody, Text, Box, Button, Flex, ArrowDownIcon, Link } from '@damiand/jetswap-uikit'
 import { Pair } from '@pancakeswap-libs/sdk'
 import { useTokenBalancesWithLoadingIndicator } from 'state/wallet/hooks'
 import { toV2LiquidityToken, useTrackedTokenPairs } from 'state/user/hooks'

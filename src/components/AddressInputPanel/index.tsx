@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react'
 import styled from 'styled-components'
-import { Text } from '@domgeswap/uikit100'
+import { Text } from '@damiand/jetswap-uikit'
 import useI18n from 'hooks/useI18n'
 import useENS from '../../hooks/useENS'
 import { useActiveWeb3React } from '../../hooks'

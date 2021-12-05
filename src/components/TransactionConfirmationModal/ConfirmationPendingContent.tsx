@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Text } from '@domgeswap/uikit100'
+import { Text } from '@damiand/jetswap-uikit'
 import { Spinner } from '../Shared'
 import { AutoColumn } from '../Column'
 import { Wrapper, Section, ConfirmedIcon, ContentHeader } from './helpers'

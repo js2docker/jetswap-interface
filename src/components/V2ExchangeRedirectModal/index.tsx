@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
-import { Modal, Text, Link, Button, Flex, Heading } from '@domgeswap/uikit100'
+import { Modal, Text, Link, Button, Flex, Heading } from '@damiand/jetswap-uikit'
 
 const defaultOnDismiss = () => null
 

@@ -12,7 +12,7 @@ import {
   ArrowDownIcon,
   ErrorIcon,
   OpenNewIcon,
-} from '@domgeswap/uikit100'
+} from '@damiand/jetswap-uikit'
 
 const otherProjects = [
   {
