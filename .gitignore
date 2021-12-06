@@ -12,6 +12,9 @@ sftp-config.json
 # production
 /build
 
+#yarn 
+yarn.lock
+
 # misc
 .DS_Store
 .env.local

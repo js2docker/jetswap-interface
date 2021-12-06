@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, ButtonProps, useWalletModal} from '@damiand/jetswap-uikit'
+import { Button, ButtonProps, useWalletModal} from 'loopswap-uikit'
 import useI18n from 'hooks/useI18n'
 import useAuth from 'hooks/useAuth'
 

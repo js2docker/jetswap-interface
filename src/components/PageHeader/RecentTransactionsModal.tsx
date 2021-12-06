@@ -1,14 +1,14 @@
 import React, { useMemo } from 'react'
-import { CheckmarkCircleIcon, ErrorIcon, Flex, LinkExternal, Text, Modal, Button } from '@damiand/jetswap-uikit'
+import { CheckmarkCircleIcon, ErrorIcon, Flex, LinkExternal, Text, Modal, Button } from 'loopswap-uikit'
 import { useActiveWeb3React } from 'hooks'
-import { getBscScanLink } from 'utils'
+import { getFantomScanLink } from 'utils'
 import { isTransactionRecent, useAllTransactions } from 'state/transactions/hooks'
 import { TransactionDetails } from 'state/transactions/reducer'
 import Loader from 'components/Loader'
 
 type RecentTransactionsModalProps = {
   onDismiss?: () => void
-  translateString: (translationId: number, fallback: string) => string
+  translateString: (translationId: number, fallback: string) => (string)
 }
 
 // TODO: Fix UI Kit typings
@@ -31,6 +31,7 @@ const getRowStatus = (sortedRecentTransaction: TransactionDetails) => {
 }
 
 const RecentTransactionsModal = ({ onDismiss = defaultOnDismiss, translateString }: RecentTransactionsModalProps) => {
+  const TranslateString = translateString
   const { account, chainId } = useActiveWeb3React()
   const allTransactions = useAllTransactions()
 
@@ -41,7 +42,7 @@ const RecentTransactionsModal = ({ onDismiss = defaultOnDismiss, translateString
   }, [allTransactions])
 
   return (
-    <Modal title={translateString(1202, 'Recent transactions')} onDismiss={onDismiss}>
+    <Modal title={TranslateString(1202, 'Recent transactions')} onDismiss={onDismiss}>
       {!account && (
         <Flex justifyContent="center" flexDirection="column" alignItems="center">
           <Text mb="8px" bold>
@@ -71,7 +72,7 @@ const RecentTransactionsModal = ({ onDismiss = defaultOnDismiss, translateString
           return (
             <>
               <Flex key={hash} alignItems="center" justifyContent="space-between" mb="4px">
-                <LinkExternal href={getBscScanLink(chainId, hash, 'transaction')} color={color}>
+                <LinkExternal href={getFantomScanLink(chainId, hash, 'transaction')} color={color}>
                   {summary ?? hash}
                 </LinkExternal>
                 {icon}

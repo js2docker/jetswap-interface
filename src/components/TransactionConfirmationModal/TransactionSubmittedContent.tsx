@@ -1,10 +1,10 @@
-import { ChainId } from '@pancakeswap-libs/sdk'
+import { ChainId } from 'jetswap-sdk-fantom'
 import React, { useContext } from 'react'
 import { ThemeContext } from 'styled-components'
-import { Button, LinkExternal } from '@damiand/jetswap-uikit'
+import { Button, LinkExternal } from 'loopswap-uikit'
 import { ArrowUpCircle } from 'react-feather'
 import { AutoColumn } from '../Column'
-import { getBscScanLink } from '../../utils'
+import { getFantomScanLink } from '../../utils'
 import { Wrapper, Section, ConfirmedIcon, ContentHeader } from './helpers'
 
 type TransactionSubmittedContentProps = {
@@ -25,7 +25,7 @@ const TransactionSubmittedContent = ({ onDismiss, chainId, hash }: TransactionSu
         </ConfirmedIcon>
         <AutoColumn gap="8px" justify="center">
           {chainId && hash && (
-            <LinkExternal href={getBscScanLink(chainId, hash, 'transaction')}>View on BscScan</LinkExternal>
+            <LinkExternal href={getFantomScanLink(chainId, hash, 'transaction')}>View on FantomScan</LinkExternal>
           )}
           <Button onClick={onDismiss} mt="20px">
             Close

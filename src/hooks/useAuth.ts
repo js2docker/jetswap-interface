@@ -9,7 +9,7 @@ import {
   UserRejectedRequestError as UserRejectedRequestErrorWalletConnect,
   WalletConnectConnector,
 } from '@web3-react/walletconnect-connector'
-import { connectorLocalStorageKey, ConnectorNames } from '@damiand/jetswap-uikit'
+import { connectorLocalStorageKey, ConnectorNames } from 'loopswap-uikit'
 import useToast from 'hooks/useToast'
 import { connectorsByName } from 'connectors'
 

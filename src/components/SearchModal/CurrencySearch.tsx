@@ -1,6 +1,6 @@
-import { Currency, ETHER, Token } from '@pancakeswap-libs/sdk'
+import { Currency, ETHER, Token } from 'jetswap-sdk-fantom'
 import React, { KeyboardEvent, RefObject, useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react'
-import { Text, CloseIcon } from '@damiand/jetswap-uikit'
+import { Text, CloseIcon } from 'loopswap-uikit'
 import { useSelector } from 'react-redux'
 import { useTranslation } from 'react-i18next'
 import { FixedSizeList } from 'react-window'
@@ -59,7 +59,7 @@ export function CurrencySearch({
 
   const showETH: boolean = useMemo(() => {
     const s = searchQuery.toLowerCase().trim()
-    return s === '' || s === 'b' || s === 'bn' || s === 'bnb'
+    return s === '' || s === 'f' || s === 'fa' || s === 'fan' || s === 'fant' || s === 'fanto' || s === 'fantom'
   }, [searchQuery])
 
   const tokenComparator = useTokenComparator(invertSearchOrder)
@@ -120,7 +120,7 @@ export function CurrencySearch({
     (e: KeyboardEvent<HTMLInputElement>) => {
       if (e.key === 'Enter') {
         const s = searchQuery.toLowerCase().trim()
-        if (s === 'bnb') {
+        if (s === 'fantom') {
           handleCurrencySelect(ETHER)
         } else if (filteredSortedTokens.length > 0) {
           if (

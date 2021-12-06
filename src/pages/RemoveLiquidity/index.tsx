@@ -1,10 +1,11 @@
+/* eslint-disable react/jsx-no-bind */
 import React, { useCallback, useContext, useMemo, useState } from 'react'
 import styled, { ThemeContext } from 'styled-components'
 import { splitSignature } from '@ethersproject/bytes'
 import { Contract } from '@ethersproject/contracts'
 import { TransactionResponse } from '@ethersproject/providers'
-import { Currency, currencyEquals, ETHER, Percent, WETH } from '@pancakeswap-libs/sdk'
-import { Button, Flex, Text } from '@damiand/jetswap-uikit'
+import { Currency, currencyEquals, ETHER, Percent, WETH } from 'jetswap-sdk-fantom'
+import { Button, Flex, Text } from 'loopswap-uikit'
 import { ArrowDown, Plus } from 'react-feather'
 import { RouteComponentProps } from 'react-router'
 
@@ -18,7 +19,6 @@ import DoubleCurrencyLogo from '../../components/DoubleLogo'
 import { AddRemoveTabs } from '../../components/NavigationTabs'
 import { MinimalPositionCard } from '../../components/PositionCard'
 import { RowBetween, RowFixed } from '../../components/Row'
-import Container from '../../components/Container'
 
 import Slider from '../../components/Slider'
 import CurrencyLogo from '../../components/CurrencyLogo'
@@ -124,7 +124,7 @@ export default function RemoveLiquidity({
       { name: 'verifyingContract', type: 'address' },
     ]
     const domain = {
-      name: 'Pancake LPs',
+      name: 'Jetswap LPs',
       version: '1',
       chainId,
       verifyingContract: pair.liquidityToken.address,
@@ -445,7 +445,7 @@ export default function RemoveLiquidity({
   )
 
   return (
-    <Container>
+    <>
       <AppBody>
         <AddRemoveTabs adding={false} />
         <Wrapper>
@@ -555,15 +555,15 @@ export default function RemoveLiquidity({
                                 currencyB === ETHER ? WETH[chainId].address : currencyIdB
                               }`}
                             >
-                              {TranslateString(1188, 'Receive WBNB')}
+                              {TranslateString(1188, 'Receive WFANTOM')}
                             </StyledInternalLink>
                           ) : oneCurrencyIsWETH ? (
                             <StyledInternalLink
                               to={`/remove/${
-                                currencyA && currencyEquals(currencyA, WETH[chainId]) ? 'BNB' : currencyIdA
-                              }/${currencyB && currencyEquals(currencyB, WETH[chainId]) ? 'BNB' : currencyIdB}`}
+                                currencyA && currencyEquals(currencyA, WETH[chainId]) ? 'FANTOM' : currencyIdA
+                              }/${currencyB && currencyEquals(currencyB, WETH[chainId]) ? 'FANTOM' : currencyIdB}`}
                             >
-                              {TranslateString(1190, 'Receive BNB')}
+                              {TranslateString(1190, 'Receive FANTOM')}
                             </StyledInternalLink>
                           ) : null}
                         </RowBetween>
@@ -679,6 +679,6 @@ export default function RemoveLiquidity({
           <MinimalPositionCard showUnwrapped={oneCurrencyIsWETH} pair={pair} />
         </AutoColumn>
       ) : null}
-    </Container>
+    </>
   )
 }

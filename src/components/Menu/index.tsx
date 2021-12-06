@@ -1,12 +1,12 @@
 import React, { useContext } from 'react'
-import { Menu as UikitMenu } from '@damiand/jetswap-uikit'
+import { Menu as UikitMenu} from 'loopswap-uikit'
 import { useWeb3React } from '@web3-react/core'
 import { allLanguages } from 'constants/localisation/languageCodes'
 import { LanguageContext } from 'hooks/LanguageContext'
 import useTheme from 'hooks/useTheme'
+import useWingsPrice from 'hooks/useWingsPrice'
 import useGetLocalProfile from 'hooks/useGetLocalProfile'
 import useAuth from 'hooks/useAuth'
-import useGetCakeBusdLpPrice from 'utils/useGetCakeBusdLpPrice'
 import links from './config'
 
 const Menu: React.FC = (props) => {
@@ -14,7 +14,7 @@ const Menu: React.FC = (props) => {
   const { login, logout } = useAuth()
   const { selectedLanguage, setSelectedLanguage } = useContext(LanguageContext)
   const { isDark, toggleTheme } = useTheme()
-  const cakeBusdPrice = useGetCakeBusdLpPrice()
+  const cakePriceUsd = useWingsPrice()
   const profile = useGetLocalProfile()
 
   return (
@@ -28,7 +28,7 @@ const Menu: React.FC = (props) => {
       currentLang={selectedLanguage?.code || ''}
       langs={allLanguages}
       setLang={setSelectedLanguage}
-      cakePriceUsd={cakeBusdPrice}
+      cakePriceUsd={cakePriceUsd}
       profile={profile}
       {...props}
     />

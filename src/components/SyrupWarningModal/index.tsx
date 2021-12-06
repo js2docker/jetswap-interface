@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from 'react'
 import styled from 'styled-components'
-import { Button, Text } from '@damiand/jetswap-uikit'
+import { Button, Text } from 'loopswap-uikit'
 import { AlertTriangle } from 'react-feather'
 import Modal from '../Modal'
 import { AutoRow, RowBetween } from '../Row'
@@ -26,7 +26,7 @@ export default function SyrupWarningModal({
   onConfirm,
 }: {
   isOpen: boolean
-  transactionType: string | null
+  transactionType: string
   onConfirm: () => void
 }) {
   const [understandChecked, setUnderstandChecked] = useState(false)

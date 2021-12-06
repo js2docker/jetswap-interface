@@ -1,34 +1,22 @@
-import { MenuEntry } from '@damiand/jetswap-uikit'
+import { MenuEntry } from 'loopswap-uikit'
 
 const config: MenuEntry[] = [
   {
     label: 'Home',
     icon: 'HomeIcon',
-    href: 'https://pancakeswap.finance/',
+    href: 'https://fantom.jetswap.finance',
   },
   {
     label: 'Trade',
     icon: 'TradeIcon',
     initialOpenState: true,
-    status: {
-      text: 'MIGRATE',
-      color: 'warning',
-    },
     items: [
       {
-        label: 'LP Migration',
-        href: '/migrate',
-      },
-      {
         label: 'Exchange',
-        href: 'https://exchange.pancakeswap.finance/#/swap',
+        href: '/swap',
       },
       {
         label: 'Liquidity',
-        href: 'https://exchange.pancakeswap.finance/#/pool',
-      },
-      {
-        label: 'V1 Liquidity (Old)',
         href: '/pool',
       },
     ],
@@ -36,105 +24,130 @@ const config: MenuEntry[] = [
   {
     label: 'Farms',
     icon: 'FarmIcon',
-    href: 'https://pancakeswap.finance/farms',
+    href: 'https://fantom.jetswap.finance/farms',
   },
   {
     label: 'Pools',
     icon: 'PoolIcon',
-    href: 'https://pancakeswap.finance/pools',
+    href: 'https://fantom.jetswap.finance/pools',
   },
   {
-    label: 'Prediction (BETA)',
-    icon: 'PredictionsIcon',
-    href: 'https://pancakeswap.finance/prediction',
+    label: 'Vaults',
+    icon: 'VaultIcon',
+    href: 'https://fantom.jetswap.finance/vaults',
   },
   {
-    label: 'Lottery',
-    icon: 'TicketIcon',
-    href: 'https://pancakeswap.finance/lottery',
+    label: 'IJO',
+    icon: 'IfoIcon',
+    href: 'https://fantom.jetswap.finance/ijo',
   },
-  {
-    label: 'Collectibles',
-    icon: 'NftIcon',
-    href: 'https://pancakeswap.finance/nft',
-  },
-  {
-    label: 'Team Battle',
-    icon: 'TeamBattleIcon',
-    href: 'https://pancakeswap.finance/competition',
-  },
-  {
-    label: 'Teams & Profile',
-    icon: 'GroupsIcon',
-    items: [
-      {
-        label: 'Leaderboard',
-        href: 'https://pancakeswap.finance/teams',
-      },
-      {
-        label: 'Task Center',
-        href: 'https://pancakeswap.finance/profile/tasks',
-      },
-      {
-        label: 'Your Profile',
-        href: 'https://pancakeswap.finance/profile',
-      },
-    ],
-  },
+  // {
+  //   label: 'Pforce',
+  //   icon: 'PforceIcon',
+  //   href: 'https://fantom.jetswap.finance/pforce',
+  // },
   {
     label: 'Info',
     icon: 'InfoIcon',
     items: [
       {
         label: 'Overview',
-        href: 'https://pancakeswap.info',
+        href: 'https://fantom-info.jetswap.finance/home',
+        target: "_blank",
       },
       {
         label: 'Tokens',
-        href: 'https://pancakeswap.info/tokens',
+        href: 'https://fantom-info.jetswap.finance/tokens',
+        target: "_blank",
       },
       {
         label: 'Pairs',
-        href: 'https://pancakeswap.info/pairs',
+        href: 'https://fantom-info.jetswap.finance/pairs',
+        target: "_blank",
       },
       {
         label: 'Accounts',
-        href: 'https://pancakeswap.info/accounts',
+        href: 'https://fantom-info.jetswap.finance/accounts',
+        target: "_blank",
       },
     ],
   },
   {
-    label: 'IFO',
-    icon: 'IfoIcon',
-    href: 'https://pancakeswap.finance/ifo',
+    label: 'Partnership',
+    icon: 'PartnerIcon',
+    href: 'https://docs.google.com/forms/d/e/1FAIpQLSeeN_QCs_OQFfRhJQagJFCTJ6GWHWUKWbw2cb6RzXzYrsrPbw/viewform',
+  },
+  {
+    label: 'Audit',
+    icon: 'AuditIcon',
+    items: [
+      {
+        label: 'Audit by EtherAuthority',
+        href: 'https://fantom.jetswap.finance/audit-by-etherauthority.pdf',
+        target: "_blank",
+      },
+      {
+        label: 'Audit by Hash0x',
+        href: 'https://fantom.jetswap.finance/audit-by-hash0x.pdf',
+        target: "_blank",
+      },
+    ],
+  },
+  {
+    label: 'Games',
+    icon: 'DiceIcon',
+    items: [
+      {
+        label: 'Coin Flip',
+        href: 'https://fantom.jetswap.finance/coin-flip',
+      },
+      {
+        label: 'Barbell Roll',
+        href: 'https://fantom.jetswap.finance/barbell-roll',
+      },
+      {
+        label: 'Roulette',
+        href: 'https://fantom.jetswap.finance/roulette',
+      },
+      {
+        label: 'Dice It',
+        href: 'https://fantom.jetswap.finance/dice-it',
+      },
+    ],
   },
   {
     label: 'More',
     icon: 'MoreIcon',
     items: [
       {
-        label: 'Contact',
-        href: 'https://docs.pancakeswap.finance/contact-us',
-      },
-      {
-        label: 'Voting',
-        href: 'https://voting.pancakeswap.finance',
-      },
-      {
-        label: 'Github',
-        href: 'https://github.com/pancakeswap',
-      },
-      {
         label: 'Docs',
-        href: 'https://docs.pancakeswap.finance',
+        href: 'https://docs.jetswap.finance',
+        target: "_blank",
       },
       {
         label: 'Blog',
-        href: 'https://pancakeswap.medium.com',
+        href: 'https://jetfuelfinance.medium.com/',
+        target: "_blank",
       },
       {
-        label: 'Merch',
-        href: 'https://pancakeswap.creator-spring.com/',
+        label: 'Vote',
+        href: 'https://fantom-vote.jetswap.finance/',
+        target: '_blank',
+      },
+      {
+        label: 'Jetfuel Finance',
+        href: 'https://jetfuel.finance',
+        target: "_blank",
+      },
+      {
+        label: 'Fortress',
+        href: 'https://fortress.loans',
+        target: "_blank",
+      },
+      {
+        label: 'Gforce',
+        href: 'https://jetfuel.finance/gforce',
+        target: "_blank",
       },
     ],
   },

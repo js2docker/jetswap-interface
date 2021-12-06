@@ -36,7 +36,7 @@ const CircleRow = styled.div`
 const Connector = styled.div<{ prevConfirmed?: boolean }>`
   width: 100%;
   height: 2px;
-  background-color: ;
+  background-color: #FFFFFF;
   background: linear-gradient(
     90deg,
     ${({ theme, prevConfirmed }) => transparentize(0.5, prevConfirmed ? theme.colors.success : theme.colors.primary)} 0%,

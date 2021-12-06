@@ -1,4 +1,4 @@
-import { ChainId, JSBI, Pair, Route, Token, TokenAmount, Trade, TradeType } from '@pancakeswap-libs/sdk'
+import { ChainId, JSBI, Pair, Route, Token, TokenAmount, Trade, TradeType } from 'jetswap-sdk-fantom'
 import { computeTradePriceBreakdown } from './prices'
 
 describe('prices', () => {
@@ -13,7 +13,7 @@ describe('prices', () => {
     it('returns undefined for undefined', () => {
       expect(computeTradePriceBreakdown(undefined)).toEqual({
         priceImpactWithoutFee: undefined,
-        realizedLPFee: undefined,
+        realizedLPFee: undefined
       })
     })
 
@@ -22,7 +22,7 @@ describe('prices', () => {
         computeTradePriceBreakdown(
           new Trade(new Route([pair12], token1), new TokenAmount(token1, JSBI.BigInt(1000)), TradeType.EXACT_INPUT)
         ).realizedLPFee
-      ).toEqual(new TokenAmount(token1, JSBI.BigInt(2)))
+      ).toEqual(new TokenAmount(token1, JSBI.BigInt(3)))
     })
 
     it('correct realized lp fee for double hop', () => {
@@ -34,7 +34,7 @@ describe('prices', () => {
             TradeType.EXACT_INPUT
           )
         ).realizedLPFee
-      ).toEqual(new TokenAmount(token1, JSBI.BigInt(3)))
+      ).toEqual(new TokenAmount(token1, JSBI.BigInt(5)))
     })
   })
 })

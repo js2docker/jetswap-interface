@@ -1,5 +1,5 @@
 import { parseUnits } from '@ethersproject/units'
-import { Currency, CurrencyAmount, ETHER, JSBI, Token, TokenAmount, Trade } from '@pancakeswap-libs/sdk'
+import { Currency, CurrencyAmount, ETHER, JSBI, Token, TokenAmount, Trade } from 'jetswap-sdk-fantom'
 import { ParsedQs } from 'qs'
 import { useCallback, useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
@@ -33,7 +33,7 @@ export function useSwapActionHandlers(): {
       dispatch(
         selectCurrency({
           field,
-          currencyId: currency instanceof Token ? currency.address : currency === ETHER ? 'BNB' : '',
+          currencyId: currency instanceof Token ? currency.address : currency === ETHER ? 'FANTOM' : '',
         })
       )
     },
@@ -87,9 +87,9 @@ export function tryParseAmount(value?: string, currency?: Currency): CurrencyAmo
 }
 
 const BAD_RECIPIENT_ADDRESSES: string[] = [
-  '0xBCfCcbde45cE874adCB698cC183deBcF17952812', // v2 factory
-  '0xf164fC0Ec4E93095b804a4795bBe1e041497b92a', // v2 router 01
-  '0x05fF2B0DB69458A0750badebc4f9e13aDd608C7F', // v2 router 02
+  '0x0eb58E5c8aA63314ff5547289185cC4583DfCBD5', // v2 factory
+  '0xBe65b8f75B9F20f4C522e0067a3887FADa714800', // v2 router 01
+  '0x819801d9048EC5D1DEb04E72b3B2dA4bd8E5ca9e', // v2 router 02
 ]
 
 /**
@@ -122,8 +122,8 @@ export function useDerivedSwapInfo(): {
     recipient,
   } = useSwapState()
 
-  const inputCurrency = useCurrency(inputCurrencyId)
-  const outputCurrency = useCurrency(outputCurrencyId)
+  const inputCurrency = useCurrency(inputCurrencyId || '0x3D8f1ACCEe8e263F837138829B6C4517473d0688')
+  const outputCurrency = useCurrency(outputCurrencyId || '0x3D8f1ACCEe8e263F837138829B6C4517473d0688')
   const recipientLookup = useENS(recipient ?? undefined)
   const to: string | null = (recipient === null ? account : recipientLookup.address) ?? null
 
@@ -201,10 +201,10 @@ function parseCurrencyFromURLParameter(urlParam: any): string {
   if (typeof urlParam === 'string') {
     const valid = isAddress(urlParam)
     if (valid) return valid
-    if (urlParam.toUpperCase() === 'BNB') return 'BNB'
-    if (valid === false) return 'BNB'
+    if (urlParam.toUpperCase() === 'FANTOM') return 'FANTOM'
+    if (valid === false) return 'FANTOM'
   }
-  return ''
+  return 'FANTOM' ?? ''
 }
 
 function parseTokenAmountURLParameter(urlParam: any): string {

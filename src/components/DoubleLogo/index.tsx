@@ -1,4 +1,4 @@
-import { Currency } from '@pancakeswap-libs/sdk'
+import { Currency } from 'jetswap-sdk-fantom'
 import React from 'react'
 import styled from 'styled-components'
 import CurrencyLogo from '../CurrencyLogo'

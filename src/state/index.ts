@@ -14,10 +14,7 @@ import toasts from './toasts'
 import { getThemeCache } from '../utils/theme'
 
 type MergedState = {
-  user: {
-    [key: string]: any
-  }
-  transactions: {
+  [key: string]: {
     [key: string]: any
   }
 }

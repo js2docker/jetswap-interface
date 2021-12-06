@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react'
-import { Currency, Pair } from '@pancakeswap-libs/sdk'
-import { Button, ChevronDownIcon, Text } from '@damiand/jetswap-uikit'
+import { Currency, Pair } from 'jetswap-sdk-fantom'
+import { Button, ChevronDownIcon, Text } from 'loopswap-uikit'
 import styled from 'styled-components'
 import { darken } from 'polished'
 import useI18n from 'hooks/useI18n'
@@ -157,11 +157,11 @@ export default function CurrencyInputPanel({
                 <CurrencyLogo currency={currency} size="24px" style={{ marginRight: '8px' }} />
               ) : null}
               {pair ? (
-                <Text id="pair">
+                <Text>
                   {pair?.token0.symbol}:{pair?.token1.symbol}
                 </Text>
               ) : (
-                <Text id="pair">
+                <Text>
                   {(currency && currency.symbol && currency.symbol.length > 20
                     ? `${currency.symbol.slice(0, 4)}...${currency.symbol.slice(
                         currency.symbol.length - 5,

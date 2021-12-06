@@ -1,8 +1,9 @@
+/* eslint-disable react/jsx-no-bind */
 import React, { useCallback, useState } from 'react'
 import { BigNumber } from '@ethersproject/bignumber'
 import { TransactionResponse } from '@ethersproject/providers'
-import { Currency, currencyEquals, ETHER, TokenAmount, WETH } from '@pancakeswap-libs/sdk'
-import { Button, CardBody, AddIcon, Text as UIKitText } from '@damiand/jetswap-uikit'
+import { Currency, currencyEquals, ETHER, TokenAmount, WETH } from 'jetswap-sdk-fantom'
+import { Button, CardBody, AddIcon, Text as UIKitText } from 'loopswap-uikit'
 import { RouteComponentProps } from 'react-router-dom'
 import { LightCard } from 'components/Card'
 import { AutoColumn, ColumnCenter } from 'components/Column'
@@ -28,7 +29,6 @@ import { maxAmountSpend } from 'utils/maxAmountSpend'
 import { wrappedCurrency } from 'utils/wrappedCurrency'
 import { currencyId } from 'utils/currencyId'
 import Pane from 'components/Pane'
-import Container from 'components/Container'
 import ConnectWalletButton from 'components/ConnectWalletButton'
 import useI18n from 'hooks/useI18n'
 import AppBody from '../AppBody'
@@ -48,7 +48,7 @@ export default function AddLiquidity({
   const currencyB = useCurrency(currencyIdB)
   const TranslateString = useI18n()
 
-  const oneCurrencyIsWBNB = Boolean(
+  const oneCurrencyIsWFANTOM = Boolean(
     chainId &&
       ((currencyA && currencyEquals(currencyA, WETH[chainId])) ||
         (currencyB && currencyEquals(currencyB, WETH[chainId])))
@@ -137,18 +137,18 @@ export default function AddLiquidity({
     let args: Array<string | string[] | number>
     let value: BigNumber | null
     if (currencyA === ETHER || currencyB === ETHER) {
-      const tokenBIsBNB = currencyB === ETHER
+      const tokenBIsFANTOM = currencyB === ETHER
       estimate = router.estimateGas.addLiquidityETH
       method = router.addLiquidityETH
       args = [
-        wrappedCurrency(tokenBIsBNB ? currencyA : currencyB, chainId)?.address ?? '', // token
-        (tokenBIsBNB ? parsedAmountA : parsedAmountB).raw.toString(), // token desired
-        amountsMin[tokenBIsBNB ? Field.CURRENCY_A : Field.CURRENCY_B].toString(), // token min
-        amountsMin[tokenBIsBNB ? Field.CURRENCY_B : Field.CURRENCY_A].toString(), // eth min
+        wrappedCurrency(tokenBIsFANTOM ? currencyA : currencyB, chainId)?.address ?? '', // token
+        (tokenBIsFANTOM ? parsedAmountA : parsedAmountB).raw.toString(), // token desired
+        amountsMin[tokenBIsFANTOM ? Field.CURRENCY_A : Field.CURRENCY_B].toString(), // token min
+        amountsMin[tokenBIsFANTOM ? Field.CURRENCY_B : Field.CURRENCY_A].toString(), // eth min
         account,
         deadlineFromNow,
       ]
-      value = BigNumber.from((tokenBIsBNB ? parsedAmountB : parsedAmountA).raw.toString())
+      value = BigNumber.from((tokenBIsFANTOM ? parsedAmountB : parsedAmountA).raw.toString())
     } else {
       estimate = router.estimateGas.addLiquidity
       method = router.addLiquidity
@@ -273,7 +273,7 @@ export default function AddLiquidity({
           history.push(`/add/${newCurrencyIdB}`)
         }
       } else {
-        history.push(`/add/${currencyIdA || 'BNB'}/${newCurrencyIdB}`)
+        history.push(`/add/${currencyIdA || 'FANTOM'}/${newCurrencyIdB}`)
       }
     },
     [currencyIdA, history, currencyIdB]
@@ -289,7 +289,7 @@ export default function AddLiquidity({
   }, [onFieldAInput, txHash])
 
   return (
-    <Container>
+    <>
       <CardNav activeIndex={1} />
       <AppBody>
         <AddRemoveTabs adding />
@@ -426,7 +426,7 @@ export default function AddLiquidity({
                         setShowConfirm(true)
                       }
                     }}
-                    disabled
+                    disabled={!isValid || approvalA !== ApprovalState.APPROVED || approvalB !== ApprovalState.APPROVED}
                     variant={
                       !isValid && !!parsedAmounts[Field.CURRENCY_A] && !!parsedAmounts[Field.CURRENCY_B]
                         ? 'danger'
@@ -434,7 +434,7 @@ export default function AddLiquidity({
                     }
                     width="100%"
                   >
-                    {error ?? "You can't add liquidity on V1"}
+                    {error ?? 'Supply'}
                   </Button>
                 </AutoColumn>
               )}
@@ -444,9 +444,9 @@ export default function AddLiquidity({
       </AppBody>
       {pair && !noLiquidity && pairState !== PairState.INVALID ? (
         <AutoColumn style={{ minWidth: '20rem', marginTop: '1rem' }}>
-          <MinimalPositionCard showUnwrapped={oneCurrencyIsWBNB} pair={pair} />
+          <MinimalPositionCard showUnwrapped={oneCurrencyIsWFANTOM} pair={pair} />
         </AutoColumn>
       ) : null}
-    </Container>
+    </>
   )
 }

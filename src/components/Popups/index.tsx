@@ -1,5 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Button, Text } from 'loopswap-uikit'
+import { TwitterShareButton } from 'react-share'
 import { useActivePopups } from '../../state/application/hooks'
 import { AutoColumn } from '../Column'
 import PopupItem from './PopupItem'
@@ -22,10 +24,20 @@ const MobilePopupInner = styled.div`
   overflow-x: auto;
   overflow-y: hidden;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   -webkit-overflow-scrolling: touch;
+  background-color: ${({ theme }) => theme.colors.invertedContrast};
+  border-radius: 10px;
   ::-webkit-scrollbar {
     display: none;
+  }
+
+  .share-wrapper {
+    padding: 0px 20px 20px;
+    .share-text {
+      max-width: 300px;
+      margin-bottom: 20px;
+    }
   }
 `
 
@@ -45,7 +57,8 @@ const FixedPopupColumn = styled(AutoColumn)`
 export default function Popups() {
   // get all popups
   const activePopups = useActivePopups()
-
+  const content: any = activePopups?.length > 0 ? activePopups[0].content : null
+ 
   return (
     <>
       <FixedPopupColumn gap="20px">
@@ -61,6 +74,24 @@ export default function Popups() {
             .map((item) => (
               <PopupItem key={item.key} content={item.content} popKey={item.key} removeAfterMs={item.removeAfterMs} />
             ))}
+          {content && (
+            <div className="share-wrapper">
+              <Text className="share-text">
+                Share your trade on Twitter with a simple click of a button for a chance to win huge weekly prizes.
+              </Text>
+              <TwitterShareButton
+                url="https://fantom.jetswap.finance"
+                title={`🚀 I've just ${content.txn.summary.replace('Swap', 'swapped')} on @Jetfuelfinance\n\n`}
+                via={` https://ftmscan.com/tx/${content.txn.hash}\n\nShare your trade and enter to win $1,000! 🤑\n#JetswapTrading #jetswap #fantom #ftm`}
+                hashtags={[]}
+              >
+                <Button>
+                  Twitter
+                  <img src="images/twitter.svg" alt="twitter" style={{ marginLeft: 4 }} />
+                </Button>
+              </TwitterShareButton>
+            </div>
+          )}
         </MobilePopupInner>
       </MobilePopupWrapper>
     </>
