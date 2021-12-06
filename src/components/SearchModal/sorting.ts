@@ -1,4 +1,4 @@
-import { Token, TokenAmount } from 'jetswap-sdk-fantom'
+import { Token, TokenAmount } from '@domgeswap-libs/sdk'
 import { useMemo } from 'react'
 import { useAllTokenBalances } from '../../state/wallet/hooks'
 

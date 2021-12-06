@@ -1,4 +1,4 @@
-import { ChainId, Token } from 'jetswap-sdk-fantom'
+import { ChainId, Token } from '@domgeswap-libs/sdk'
 import { Tags, TokenInfo, TokenList } from '@uniswap/token-lists'
 import { useMemo } from 'react'
 import { useSelector } from 'react-redux'

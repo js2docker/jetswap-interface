@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, Fraction, Percent } from 'jetswap-sdk-fantom'
+import { Currency, CurrencyAmount, Fraction, Percent } from '@domgeswap-libs/sdk'
 import React from 'react'
 import { Button, Text } from 'loopswap-uikit'
 import { TranslateString } from 'utils/translateTextHelpers'

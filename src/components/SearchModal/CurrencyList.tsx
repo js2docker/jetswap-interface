@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, currencyEquals, ETHER, Token } from 'jetswap-sdk-fantom'
+import { Currency, CurrencyAmount, currencyEquals, ETHER, Token } from '@domgeswap-libs/sdk'
 import React, { CSSProperties, MutableRefObject, useCallback, useMemo } from 'react'
 import { FixedSizeList } from 'react-window'
 import styled from 'styled-components'

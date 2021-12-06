@@ -1,5 +1,5 @@
 import React from 'react'
-import { Trade, TradeType } from 'jetswap-sdk-fantom'
+import { Trade, TradeType } from '@domgeswap-libs/sdk'
 import { Card, CardBody, Text } from 'loopswap-uikit'
 import useI18n from 'hooks/useI18n'
 import { Field } from '../../state/swap/actions'

@@ -1,4 +1,4 @@
-import { CurrencyAmount, ETHER, JSBI } from 'jetswap-sdk-fantom'
+import { CurrencyAmount, ETHER, JSBI } from '@domgeswap-libs/sdk'
 import { MIN_ETH } from '../constants'
 
 /**

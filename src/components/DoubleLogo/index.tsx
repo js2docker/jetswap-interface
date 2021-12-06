@@ -1,4 +1,4 @@
-import { Currency } from 'jetswap-sdk-fantom'
+import { Currency } from '@domgeswap-libs/sdk'
 import React from 'react'
 import styled from 'styled-components'
 import CurrencyLogo from '../CurrencyLogo'

@@ -1,4 +1,4 @@
-import { Currency } from 'jetswap-sdk-fantom'
+import { Currency } from '@domgeswap-libs/sdk'
 import React, { useCallback, useEffect, useState } from 'react'
 import useLast from '../../hooks/useLast'
 import { useSelectedListUrl } from '../../state/lists/hooks'

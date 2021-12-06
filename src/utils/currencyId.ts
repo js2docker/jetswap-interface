@@ -1,4 +1,4 @@
-import { Currency, ETHER, Token } from 'jetswap-sdk-fantom'
+import { Currency, ETHER, Token } from '@domgeswap-libs/sdk'
 
 export function currencyId(currency: Currency): string {
   if (currency === ETHER) return 'FANTOM'

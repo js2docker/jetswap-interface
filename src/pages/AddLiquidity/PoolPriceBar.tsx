@@ -1,5 +1,5 @@
 import React from 'react'
-import { Currency, Percent, Price } from 'jetswap-sdk-fantom'
+import { Currency, Percent, Price } from '@domgeswap-libs/sdk'
 import { Text } from 'loopswap-uikit'
 import { AutoColumn } from '../../components/Column'
 import { AutoRow } from '../../components/Row'

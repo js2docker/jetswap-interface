@@ -1,5 +1,5 @@
 import { createAction } from '@reduxjs/toolkit'
-import { ChainId } from 'jetswap-sdk-fantom'
+import { ChainId } from '@domgeswap-libs/sdk'
 
 export interface SerializableTransactionReceipt {
   to: string

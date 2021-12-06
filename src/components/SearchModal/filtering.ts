@@ -1,4 +1,4 @@
-import { Token } from 'jetswap-sdk-fantom'
+import { Token } from '@domgeswap-libs/sdk'
 import { isAddress } from '../../utils'
 
 export function filterTokens(tokens: Token[], search: string): Token[] {

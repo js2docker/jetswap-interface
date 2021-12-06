@@ -1,4 +1,4 @@
-import { ChainId, JSBI, Percent, Token, WETH } from 'jetswap-sdk-fantom'
+import { ChainId, JSBI, Percent, Token, WETH } from '@domgeswap-libs/sdk'
 
 export const ROUTER_ADDRESS = '0x845E76A8691423fbc4ECb8Dd77556Cb61c09eE25'
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Text } from 'loopswap-uikit'
-import { ChainId, Currency, currencyEquals, ETHER, Token } from 'jetswap-sdk-fantom'
+import { ChainId, Currency, currencyEquals, ETHER, Token } from '@domgeswap-libs/sdk'
 import styled from 'styled-components'
 
 import useI18n from 'hooks/useI18n'

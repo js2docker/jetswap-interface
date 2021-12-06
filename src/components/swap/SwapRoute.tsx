@@ -1,4 +1,4 @@
-import { Trade } from 'jetswap-sdk-fantom'
+import { Trade } from '@domgeswap-libs/sdk'
 import React, { Fragment, memo, useContext } from 'react'
 import { ChevronRight } from 'react-feather'
 import { Flex, Text } from 'loopswap-uikit'

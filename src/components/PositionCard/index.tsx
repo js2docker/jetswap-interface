@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { JSBI, Pair, Percent } from 'jetswap-sdk-fantom'
+import { JSBI, Pair, Percent } from '@domgeswap-libs/sdk'
 import { Button, Card as UIKitCard, CardBody, Text } from 'loopswap-uikit'
 import { darken } from 'polished'
 import { ChevronDown, ChevronUp } from 'react-feather'

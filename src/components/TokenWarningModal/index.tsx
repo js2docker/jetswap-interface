@@ -1,4 +1,4 @@
-import { Token } from 'jetswap-sdk-fantom'
+import { Token } from '@domgeswap-libs/sdk'
 import { transparentize } from 'polished'
 import { Button, Text } from 'loopswap-uikit'
 import React, { useCallback, useMemo, useState } from 'react'

@@ -1,4 +1,4 @@
-import { ChainId } from 'jetswap-sdk-fantom'
+import { ChainId } from '@domgeswap-libs/sdk'
 import { createStore, Store } from 'redux'
 import { addPopup, removePopup, toggleSettingsMenu, toggleWalletModal, updateBlockNumber } from './actions'
 import reducer, { ApplicationState } from './reducer'
