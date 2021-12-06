@@ -1,4 +1,4 @@
-import { currencyEquals, Trade } from '@domgeswap-libs/sdk'
+import { currencyEquals, Trade } from 'jetswap-sdk-fantom'
 import React, { useCallback, useMemo } from 'react'
 import TransactionConfirmationModal, {
   ConfirmationModalContent,

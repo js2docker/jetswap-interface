@@ -1,4 +1,4 @@
-import { Currency, ETHER, Token } from '@domgeswap-libs/sdk'
+import { Currency, ETHER, Token } from 'jetswap-sdk-fantom'
 import React, { useMemo } from 'react'
 import styled from 'styled-components'
 import useHttpLocations from '../../hooks/useHttpLocations'

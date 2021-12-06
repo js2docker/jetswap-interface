@@ -1,4 +1,4 @@
-import { ChainId } from '@domgeswap-libs/sdk'
+import { ChainId } from 'jetswap-sdk-fantom'
 import { createStore, Store } from 'redux'
 import { addTransaction, checkedTransaction, clearAllTransactions, finalizeTransaction } from './actions'
 import reducer, { initialState, TransactionState } from './reducer'

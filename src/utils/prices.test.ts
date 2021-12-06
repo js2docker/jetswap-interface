@@ -1,4 +1,4 @@
-import { ChainId, JSBI, Pair, Route, Token, TokenAmount, Trade, TradeType } from '@domgeswap-libs/sdk'
+import { ChainId, JSBI, Pair, Route, Token, TokenAmount, Trade, TradeType } from 'jetswap-sdk-fantom'
 import { computeTradePriceBreakdown } from './prices'
 
 describe('prices', () => {

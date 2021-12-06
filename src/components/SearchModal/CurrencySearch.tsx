@@ -1,4 +1,4 @@
-import { Currency, ETHER, Token } from '@domgeswap-libs/sdk'
+import { Currency, ETHER, Token } from 'jetswap-sdk-fantom'
 import React, { KeyboardEvent, RefObject, useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react'
 import { Text, CloseIcon } from 'loopswap-uikit'
 import { useSelector } from 'react-redux'

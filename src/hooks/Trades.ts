@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, Pair, Token, Trade } from '@domgeswap-libs/sdk'
+import { Currency, CurrencyAmount, Pair, Token, Trade } from 'jetswap-sdk-fantom'
 import flatMap from 'lodash.flatmap'
 import { useMemo } from 'react'
 

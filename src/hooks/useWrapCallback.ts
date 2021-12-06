@@ -1,4 +1,4 @@
-import { Currency, currencyEquals, ETHER, WETH } from '@domgeswap-libs/sdk'
+import { Currency, currencyEquals, ETHER, WETH } from 'jetswap-sdk-fantom'
 import { useMemo } from 'react'
 import { tryParseAmount } from '../state/swap/hooks'
 import { useTransactionAdder } from '../state/transactions/hooks'

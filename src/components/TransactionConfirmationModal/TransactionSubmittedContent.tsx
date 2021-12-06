@@ -1,4 +1,4 @@
-import { ChainId } from '@domgeswap-libs/sdk'
+import { ChainId } from 'jetswap-sdk-fantom'
 import React, { useContext } from 'react'
 import { ThemeContext } from 'styled-components'
 import { Button, LinkExternal } from 'loopswap-uikit'

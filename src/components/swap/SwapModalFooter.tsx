@@ -1,4 +1,4 @@
-import { Trade, TradeType } from '@domgeswap-libs/sdk'
+import { Trade, TradeType } from 'jetswap-sdk-fantom'
 import React, { useMemo, useState } from 'react'
 import { Text, Button } from 'loopswap-uikit'
 import { Repeat } from 'react-feather'

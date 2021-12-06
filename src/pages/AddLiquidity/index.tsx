@@ -2,7 +2,7 @@
 import React, { useCallback, useState } from 'react'
 import { BigNumber } from '@ethersproject/bignumber'
 import { TransactionResponse } from '@ethersproject/providers'
-import { Currency, currencyEquals, ETHER, TokenAmount, WETH } from '@domgeswap-libs/sdk'
+import { Currency, currencyEquals, ETHER, TokenAmount, WETH } from 'jetswap-sdk-fantom'
 import { Button, CardBody, AddIcon, Text as UIKitText } from 'loopswap-uikit'
 import { RouteComponentProps } from 'react-router-dom'
 import { LightCard } from 'components/Card'
